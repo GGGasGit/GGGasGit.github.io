@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egy szuper oldal</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/forms.css">
 </head>
+
 <body>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/pages/products.html">Products</a>
-        </li>
-        <li>
-            <a href="/pages/orders.html">Orders</a>
-        </li>
-        <li>
-            <a href="/about.html">About</a>
-        </li>
-    </ul>
-    <h1>
-        Szia, ez az én szuperjó oldalam
-    </h1>
-    <h3>
-        Milyen jó
-    </h3>
-    <h6>
-        Annyira, bébi
-    </h6>
-    <p>
-        <a target="blank" href="https://www.missq.es">Asszony weboldala</a>
-        <a href="https://www.missq.es"><img width="56" src="img/hambi.jpg" alt="hambi"></a>
-    </p>
-    <p>
-        Beírtam <strong>valami</strong> <em>nagyon fontos</em> szöveget.
-    </p>
-    <a href="about.html">About</a>
-    <a href="pages/orders.html">Rendelések</a>
-    <h1>
-        Hambeszok
-    </h1>
-    <ol>
-        <li>Usos</li>
-        <li>Sonkás
-        <ul>
-            <li>Plusz sajtos</li>
-            <li>Sima sajtos</li>
-        </ul>
-        </li>
-    </ol>
-    <img src="img/hambi.jpg" alt="hambi">
+    <h1>Minta űrlap oldal</h1>
+    <form action="" class="form-block">
+        <fieldset class="form-input">
+            <legend>Beviteli mezők</legend>
+            <div class="input1">
+                <label for="input-text1">Input 1 mező</label>
+                <input type="text" name="input-text1" id="input-text1" value="Alapértelmezett érték">
+            </div>
+            <div class="input2">
+                <label for="input-text2">Input 2 mező</label>
+                <input type="text" name="input-text2" id="input-text2">
+            </div>
+            <div class="input3">
+                <label for="input-text3">Input 3 mező*</label>
+                <input type="text" name="input-text3" id="input-text3" required>
+            </div>
+        </fieldset>
+        <fieldset class="form-check">
+            <legend>Jelölőnégyzetek</legend>
+            <div class="check1">
+                <label for="input-check1">Checkbox 1</label>
+                <input type="checkbox" name="input-check1" id="input-check1" checked>
+            </div>
+            <div class="check2">
+                <label for="input-check2">Checkbox 2</label>
+                <input type="checkbox" name="input-check2" id="input-check2">
+            </div>
+        </fieldset>
+        <fieldset class="form-radio">
+            <legend>Rádiógombok</legend>
+            <div class="radio1">
+                <label for="input-radio1">Radio 1</label>
+                <input type="radio" name="input-radio" id="input-radio1" checked>
+            </div>
+            <div class="radio2">
+                <label for="input-radio2">Radio 2</label>
+                <input type="radio" name="input-radio" id="input-radio2">
+            </div>
+        </fieldset>
+        <button>Submit</button>
+    </form>
 </body>
+
 </html>
