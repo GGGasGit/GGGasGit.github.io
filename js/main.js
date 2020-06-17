@@ -1,30 +1,59 @@
 let totalAmount
-let orderedAmount
-let price
+let orderedAmount = document.querySelector("input[name='orderAmount']");
 let selectedPrice
 let totalPayable
-let priceTag
+let houseDeliveryOption = document.querySelector("input[name='houseDelivery']");
+
+function readAmount() {
+    totalAmount = parseInt(orderedAmount.value);
+}
+
+function readPrice() {
+    let price = document.querySelector("select[name='kebabType']");
+    selectedPrice = parseInt(price.value);
+}
+
+function displayAmount(totalPayable) {
+    let priceTag = document.querySelector("span.totalPrice");
+    priceTag.innerHTML = totalPayable;
+}
+
+function readHouseDelivery() {
+    if (houseDeliveryOption.checked == true) {
+        houseDeliveryPrice = 200;
+    } else {
+        houseDeliveryPrice = 0;
+    }
+    return houseDeliveryPrice;
+}
+
+function resetAll() {
+    houseDeliveryOption.checked = false;
+    orderedAmount.value = 1;
+    calculateAmount()
+}
 
 function sendMessage() {
-    orderedAmount = document.querySelector("input[name='orderAmount']");
-    totalAmount = parseInt(orderedAmount.value);
+    readAmount();
     if (totalAmount < 0 || totalAmount == 0 || isNaN(totalAmount)) {
         alert("Valami darabot azért adjá' má' meg!");
     } else {
-    alert("Köszike a megrendelést, küldjük az árut!");
-}
+        alert("Köszike a megrendelést, küldjük az árut!");
+    }
+
+    resetAll();
 }
 
 function calculateAmount() {
-    orderedAmount = document.querySelector("input[name='orderAmount']");
-    totalAmount = parseInt(orderedAmount.value);
+    readAmount();
     totalAmount = isNaN(totalAmount) ? 0 : totalAmount;
     if (totalAmount < 0) {
         totalAmount = 0;
     }
-    price = document.querySelector("select[name='kebabType']");
-    selectedPrice = parseInt(price.value);
-    totalPayable = selectedPrice * totalAmount;
-    priceTag = document.querySelector("span.totalPrice");
-    priceTag.innerHTML = totalPayable;
+
+    readPrice();
+    readHouseDelivery();
+    totalPayable = selectedPrice * totalAmount + houseDeliveryPrice;
+
+    displayAmount(totalPayable);
 }

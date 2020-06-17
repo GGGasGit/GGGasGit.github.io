@@ -52,10 +52,10 @@
           <div class="form-group">
             <label for="kebabType">Kebab</label>
             <select type="text" class="form-control" id="kebabType" name="kebabType" aria-describedby="kebabTypeInfo" onchange="calculateAmount()">
-              <option value="1000">Simásat akarok</option>
-              <option value="1200">Extra husis</option>
-              <option value="900">Falafel</option>
-              <option value="1000">Csípős nélkül</option>
+              <option value="1000">Simásat akarok – 1000 Ft</option>
+              <option value="1200">Extra husis – 1200 Ft</option>
+              <option value="900">Falafel – 900 Ft</option>
+              <option value="1000">Csípős nélkül – 1000 Ft</option>
             </select>
             <small id="kebabTypeInfo" class="form-text text-muted">Milyen kebabot kérsz</small>
           </div>
@@ -63,6 +63,13 @@
             <label for="orderAmount">Darab</label>
             <input type="text" class="form-control" id="orderAmount" name="orderAmount" aria-describedby="orderAmountInfo" value="1" required onkeyup="calculateAmount()">
             <small id="orderAmountInfo" class="form-text text-muted">Hány darabot kérsz</small>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="houseDelivery" name="houseDelivery" onchange="calculateAmount()">
+            <label class="form-check-label" for="houseDelivery">Tessék házhoz hozni (extra 200 ruppó)</label>
+          </div>
+          <div class="form-group">
+            <span class="extraSpace"></span>
           </div>
           <div class="form-group">
             Ár összesen: <span class="totalPrice">1000</span> Ft
