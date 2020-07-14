@@ -57,3 +57,22 @@ function calculateAmount() {
 
     displayAmount(totalPayable);
 }
+
+
+let toppings = [
+    "Szalonna",
+    "Hagyma",
+    "Tükörtojás",
+    "Libamáj",
+    "Sonka"
+];
+
+let toppingSelect = document.querySelector("CSS selector");
+let index = 0;
+while(index < toppings.length) {
+    let option = document.createElement("option");
+    option.value = index;
+    option.innerHTML = toppings[index];
+    toppingSelect.appendChild(option);
+    index++;
+}
