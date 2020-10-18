@@ -4,62 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <title>Menüs oldal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Portfolio</title>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/index.html">Oldal</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/index.html">Főoldal <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact.html">Kapcsolat</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/tables.html">Táblázat</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/form.html">Űrlap</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/javascript.html">Javascript</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/widget.html">Widget</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés</button>
-      </form>
-    </div>
-  </nav>
-
 <body>
-    <h5 style="padding: 1px 0 0 5px;">Ez a főoldal</h5>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-                1 of 4 columns
+    <header>
+        <nav>
+            <h1><a href="#">Portfolio Page</a></h1>
+            <ul class="menu-container">
+                <li class="menu-item"><a href="#">Portfolio</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+                <li class="menu-item"><a href="#">Language</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="description">
+            <div>
+                <img class="face-picture" src="./img/self.jpg" alt="Picture of Gáspár Nagy">
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                2 of 4 columns
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                3 of 4 columns
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                4 of 4 columns
+            <h2>Gáspár Nagy</h2>
+            <h3>Front-end web developer</h3>
+            <p class="description-text">This is my portfolio page, this is me Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
+                quibusdam!</p>
+        </div>
+        <div class="portfolio">
+            <h2>MY PORTFOLIO</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 1</p>
+                </div>
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 2</p>
+                </div>
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 3</p>
+                </div>
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 1</p>
+                </div>
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 2</p>
+                </div>
+                <div class="portfolio-item">
+                    <p class="portfolio-item-text">Portfolio Item 3</p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+            <p class="footer-text">Copyright gaspar at prominentbrokers dot com</p>
+    </footer>
 </body>
 
 </html>
