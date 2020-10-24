@@ -81,7 +81,7 @@ nav {
     align-items: center;
 }
 
-.menu-item {
+.menu-item, .menu-bars {
     padding: 0 1rem;
     font-size: 2rem;
     font-variant: small-caps;
@@ -152,17 +152,42 @@ a:hover {
 }
 
 
-/* @media screen and (max-width: 576px) {
-    
+@media screen and (max-width: 576px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item {
+        padding: 0.5rem 0;
+    }
 }
 
+/* @media screen and (min-width: 577px) {
+    .menu-item {
+        display: static;
+    }
+
+    .menu-bars {
+        display: none;
+    }
+} */
+
+/*
 @media screen and (max-width: 768px) {
-    
+    .menu-bars {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 992px) {
     
 }
+
 
 @media screen and (max-width: 1200px) {
     
