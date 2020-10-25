@@ -36,6 +36,7 @@ h1 {
 
 h2 {
     font-size: 3.6rem;
+    padding: 0.5rem 0 1rem 0;
 }
 
 h3 {
@@ -106,7 +107,7 @@ a:hover {
     color: var(--hover-color);
 }
 
-/* BODY DESCRIPTION PART STYLES */
+/* HOME BODY DESCRIPTION PART STYLES */
 
 .description {
     background-color: var(--primary-color);
@@ -130,7 +131,7 @@ a:hover {
     border-radius: 50%;
 }
 
-/* BODY PORTFOLIO PART STYLES */
+/* HOME BODY PORTFOLIO PART STYLES */
 
 .portfolio {
     display: flex;
@@ -228,4 +229,37 @@ a:hover {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+/* CONTACT FORM STYLES */
+
+form {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.form-labels, .form-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label{
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.6rem;
+}
+
+input, textarea {
+    width: 38rem;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+}
+
+[type="submit"] {
+    width: 10rem;
+    margin-top: 0.75rem;
+    font-size: 1.6rem;
+    align-self: center;
 }
