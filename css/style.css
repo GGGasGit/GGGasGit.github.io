@@ -233,7 +233,7 @@ a:hover {
 
 /* CONTACT FORM STYLES */
 
-form {
+/* form {
     display: flex;
     margin-top: 2rem;
 }
@@ -244,7 +244,7 @@ form {
     align-items: flex-start;
 }
 
-label{
+label {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
     font-size: 1.6rem;
@@ -260,6 +260,37 @@ input, textarea {
 [type="submit"] {
     width: 10rem;
     margin-top: 0.75rem;
+    font-size: 1.6rem;
+    align-self: center;
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+label {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+input, textarea {
+    width: 38rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+[type="submit"] {
+    width: 10rem;
     font-size: 1.6rem;
     align-self: center;
 }
