@@ -117,7 +117,7 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     min-height: 30rem;
-    padding: 2rem 4rem;
+    padding: 2rem 3rem;
     text-align: center;
 }
 
@@ -233,6 +233,67 @@ a:hover {
 
 /* CONTACT FORM STYLES */
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+[type="submit"] {
+    width: 10rem;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 577px) {
+    .form-item {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50rem;
+    }
+
+    label {
+        padding: 0.5rem;
+        font-size: 1.6rem;
+    }
+
+    input, textarea {
+        width: 40rem;
+        padding: 0.75rem;
+    }
+
+    [type="submit"] {
+        margin-left: 10rem;
+    }
+}
+
 /* form {
     display: flex;
     margin-top: 2rem;
@@ -263,36 +324,3 @@ input, textarea {
     font-size: 1.6rem;
     align-self: center;
 } */
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-label {
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-}
-
-input, textarea {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    width: 100%;
-}
-
-[type="submit"] {
-    width: 10rem;
-    font-size: 1.6rem;
-    align-self: center;
-}
