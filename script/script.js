@@ -9,7 +9,7 @@ const exchanges = {
 
     "binance" : {
         "name": "Binance",
-        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH"}, //needed for different currencies
+        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH", "xrp": "XRP", "ltc": "LTC"}, //needed for different currencies
         "urlfiatsuffixes": {"eur": "EUR", "usd": "BUSD"},
         "url" : 'https://api.binance.com/api/v3/ticker/bookTicker?symbol=<crypto><fiat>', //<crypto><fiat> = BTCEUR
         "bidmatcher": /"bidPrice":"\d+(.)\d+"/,
@@ -19,7 +19,7 @@ const exchanges = {
 
     "bitbay" : {
         "name": "Bitbay",
-        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH"},
+        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH", "xrp": "XRP", "ltc": "LTC"},
         "urlfiatsuffixes": {"eur": "EUR", "usd": "USD"},
         "url" : 'https://api.bitbay.net/rest/trading/ticker/<crypto>-<fiat>', //BTC-EUR   //public api that gives CORS error: https://bitbay.net/API/Public/BTCEUR/ticker.json
         "bidmatcher": /"highestBid":"\d+(.)\d+"/,
@@ -29,7 +29,7 @@ const exchanges = {
     
     "bitstamp" : {
         "name": "Bitstamp",        
-        "urlcryptosuffixes": {"btc": "btc", "eth": "eth"},
+        "urlcryptosuffixes": {"btc": "btc", "eth": "eth", "xrp": "xrp", "ltc": "ltc"},
         "urlfiatsuffixes": {"eur": "eur", "usd": "usd"},
         "url" : 'https://www.bitstamp.net/api/v2/ticker/<crypto><fiat>', //btceur
         "fetchOptions" : {method: "POST"},
@@ -40,7 +40,7 @@ const exchanges = {
     
     "coinbase" : {
         "name": "Coinbase",
-        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH"},
+        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH", "xrp": "XRP", "ltc": "LTC"},
         "urlfiatsuffixes": {"eur": "EUR", "usd": "USD"},
         "url" : 'https://api.pro.coinbase.com/products/<crypto>-<fiat>/ticker', //BTC-EUR
         "bidmatcher": /"bid":"\d+(.)\d+"/,
@@ -50,7 +50,7 @@ const exchanges = {
 
     "kraken" : {
         "name": "Kraken",
-        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH"},
+        "urlcryptosuffixes": {"btc": "BTC", "eth": "ETH", "xrp": "XRP", "ltc": "LTC"},
         "urlfiatsuffixes": {"eur": "EUR", "usd": "USD"},
         "url" : 'https://api.kraken.com/0/public/Ticker?pair=<crypto><fiat>', //BTCEUR
         "bidmatcher": /"b":\["\d+(.)\d+"/,

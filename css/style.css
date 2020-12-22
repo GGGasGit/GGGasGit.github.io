@@ -19,7 +19,7 @@ img {
 /* ... */
 
 body {
-    /*background-image: url("/img/background.jpg");*/
+    background-image: url("/img/background.jpg");
     font-family: 'Montserrat', Arial, sans-serif;
     text-rendering: optimizeLegibility;
 }
@@ -49,8 +49,12 @@ h1 {
 }
 
 .selector-legend {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 1.6rem;
+}
+
+.crypto-select-row {
+    padding-bottom: 8px;
 }
 
 /* */
@@ -102,6 +106,7 @@ caption {
     font-weight: 600;
     font-size: 1.4rem;
     margin-top: 10px;
+    text-align: center;
 }
 
 footer {
