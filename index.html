@@ -7,102 +7,77 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>My Portfolio</title>
+    <title>Document</title>
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <h1><a href="index.html">Home</a></h1>
-            <ul class="menu-container">
-                <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-                <li class="menu-item"><a href="experience.html">Experience</a></li>
-                <li class="menu-item"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Cryptocurrency Price Checker</h1>
     </header>
 
     <main>
-        <div class="description">
-            <div>
-                <img class="face-picture" src="./img/self.jpg" alt="Picture of Gáspár Nagy">
+        <div class="selector-container">
+            <div class="selector-item">
+                <legend class="selector-legend">Select exchange</legend>
+                <select name="exchange" class="js-selectfield"></select>
             </div>
-            <h2>Gáspár Nagy</h2>
-            <h3>Front-end web developer</h3>
-            <p class="description-text">Hi, I'm Gáspár, this is my portfolio page where you can see all my previous web and application development projects and my experience in different languages and frameworks. For references or queries, contact me using the form on the Contact page.</p>
+
+            <div class="selector-item">
+                <legend class="selector-legend">Select cryptocurrency</legend>
+                <div>
+                    <input type="radio" name="cryptocurrency" id="currency-btc" value="btc" class="js-cryptocurrency"
+                        data-label="Bitcoin" checked>
+                    <label for="currency-btc">Bitcoin</label>
+                    <input type="radio" name="cryptocurrency" id="currency-eth" value="eth" class="js-cryptocurrency"
+                        data-label="Ethereum">
+                    <label for="currency-eth">Ethereum</label>
+                </div>
+            </div>
+
+            <div class="selector-item">
+                <legend class="selector-legend">Select fiat currency</legend>
+                <div>
+                    <input type="radio" name="fiatcurrency" id="currency-eur" value="eur" class="js-fiatcurrency"
+                        data-label="EUR" checked>
+                    <label for="currency-btc">EUR</label>
+                    <input type="radio" name="fiatcurrency" id="currency-usd" value="usd" class="js-fiatcurrency"
+                        data-label="USD">
+                    <label for="currency-usd">USD</label>
+                </div>
+            </div>
+
+            <div class="selector-item">
+                <input type="submit" value="GET" class="getbutton js-getbutton">
+            </div>
+
         </div>
-        <div class="container">
-            <h2>MY PORTFOLIO</h2>
-            <div class="item-container">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-text-container">
-                        <h3 class="portfolio-item-title">Static Html Projects</h3>
-                        <p class="portfolio-item-text">I created XY number of basic webpages.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, omnis!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.</p>
-                    </div>
-                    <div class="portfolio-item-logo">
-                        <img class="logo" src="./img/html5-brands.svg" alt="HTML5 logo">
-                        <img class="logo" src="./img/css3-alt-brands.svg" alt="CSS3 logo">
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-text-container">
-                        <h3 class="portfolio-item-title">Dynamic Html Projects</h3>
-                        <p class="portfolio-item-text">Dynamic webpages using JavaScript and React.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, omnis!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.</p>
-                    </div>
-                    <div class="portfolio-item-logo">
-                        <img class="logo" src="./img/js-square-brands.svg" alt="JavaScript logo">
-                        <img class="logo" src="./img/react-brands.svg" alt="React logo">
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-text-container">
-                        <h3 class="portfolio-item-title">Backend Projects</h3>
-                        <p class="portfolio-item-text">Projects where I used Python and Django to solve backend problems.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, omnis!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.</p>
-                    </div>
-                    <div class="portfolio-item-logo">
-                        <img class="logo" src="./img/python-seeklogo.com.svg" alt="Python logo">
-                        <img class="logo-django" src="./img/django-seeklogo.com.svg" alt="Django logo">
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-text-container">
-                        <h3 class="portfolio-item-title">CSS Projects</h3>
-                        <p class="portfolio-item-text">Bootstrap and Sass preprocessor based websites I created.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, omnis!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.</p>
-                    </div>
-                    <div class="portfolio-item-logo">
-                        <img class="logo" src="./img/bootstrap-seeklogo.com.svg" alt="Bootstrap logo">
-                        <img class="logo" src="./img/sass-brands.svg" alt="Sass logo">
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-text-container">
-                        <h3 class="portfolio-item-title">App Development Projects</h3>
-                        <p class="portfolio-item-text">All the amazing applicatons I developed.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, omnis!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.</p>
-                    </div>
-                    <div class="portfolio-item-logo">
-                        <img class="logo" src="./img/python-seeklogo.com.svg" alt="Python logo">
-                        <img class="logo" src="./img/js-square-brands.svg" alt="JavaScript logo">
-                    </div>
-                </div>
-            </div>
+
+        <div class="table-container">
+            <table class="bidasktable">
+                <caption class="js-table-caption">Bitcoin Price (EUR)</caption>
+                <thead>
+                    <tr>
+                        <th>Exchange</th>
+                        <th>Bid</th>
+                        <th>Ask</th>
+                    </tr>
+                </thead>
+                <tbody class="js-bidasktable"></tbody>
+            </table>
+
+            <table class="js-bestpricetable"></table>
+
+            <p class="errortext js-errortext"></p>
         </div>
     </main>
-
+    
     <footer>
-            <p class="footer-text">&copy; Copyright 2020 - gasparads at gmail dot com</p>
-            <p class="footer-text">All logos and brand names are trademarks of their respective owners.</p>
+        <p class="footertext">*Eff. stands for effective, taking fee into consideration</p>
+        <p class="footertext">&copy; Copyright 2020 - gasparads at gmail dot com</p>
     </footer>
+
+    <script src="./script/script.js"></script>
 
 </body>
 
